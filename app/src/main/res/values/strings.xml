@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MDBPokedexProject2</string>
+    <string name="toastForRandomPokemon">Enjoy your 20 random Pokemon!</string>
+</resources>

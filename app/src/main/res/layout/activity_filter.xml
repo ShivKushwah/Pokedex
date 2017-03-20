@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_filter"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.shiv.mdbpokedexproject2.FilterActivity">
+
+    <EditText
+        android:layout_width="83dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText2"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <EditText
+        android:layout_width="83dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText4"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp" />
+
+    <EditText
+        android:layout_width="83dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText5"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <Button
+        android:text="Apply Changes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        style="@style/Widget.AppCompat.Button.Colored" />
+
+    <TextView
+        android:text="Search Filters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView8"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:text="Minimum Attack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView9"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:text="Minimum Defense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView10"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+    <TextView
+        android:text="Minimum Health"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView11"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/editText4"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp" />
+
+    <TextView
+        android:text="Type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        android:layout_marginTop="8dp"
+        app:layout_constraintRight_toLeftOf="@+id/toggleButtonFairy" />
+
+    <ToggleButton
+        android:text="ToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toggleButtonDragon"
+        app:layout_constraintRight_toLeftOf="@+id/toggleButtonFairy"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        android:textOff="Dragon"
+        android:textOn="Dragon" />
+
+    <ToggleButton
+        android:text="ToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toggleButtonFairy"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        android:textOff="Fairy"
+        android:textOn="Fairy" />
+
+    <ToggleButton
+        android:text="ToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toggleButtonNormal"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButtonDragon"
+        app:layout_constraintRight_toLeftOf="@+id/toggleButtonFire"
+        android:textOff="Normal"
+        android:textOn="Normal" />
+
+    <ToggleButton
+        android:text="ToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toggleButtonFire"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButtonFairy"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="4dp"
+        android:textOff="Fire"
+        android:textOn="Fire" />
+
+    <ToggleButton
+        android:text="ToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toggleButtonWater"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButtonNormal"
+        app:layout_constraintRight_toLeftOf="@+id/toggleButtonGrass"
+        android:textOff="Water"
+        android:textOn="Water" />
+
+    <ToggleButton
+        android:text="ToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toggleButtonGrass"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButtonFire"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="4dp"
+        android:textOff="Grass"
+        android:textOn="Grass" />
+
+    <ToggleButton
+        android:text="ToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toggleButtonElectric"
+        app:layout_constraintRight_toLeftOf="@+id/toggleButtonIce"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButtonWater"
+        android:textOff="Electric"
+        android:textOn="Electric" />
+
+    <ToggleButton
+        android:text="ToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toggleButtonIce"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButtonGrass"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="4dp"
+        android:textOff="Ice"
+        android:textOn="Ice" />
+
+    <ToggleButton
+        android:text="ToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toggleButtonGround"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButtonElectric"
+        app:layout_constraintRight_toLeftOf="@+id/toggleButtonFlying"
+        android:textOff="Ground"
+        android:textOn="Ground" />
+
+    <ToggleButton
+        android:text="ToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toggleButtonFlying"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButtonIce"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="4dp"
+        android:textOff="Flying"
+        android:textOn="Flying" />
+
+    <ToggleButton
+        android:text="ToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toggleButtonPoison"
+        app:layout_constraintRight_toLeftOf="@+id/toggleButtonFighting"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButtonGround"
+        android:textOff="Poison"
+        android:textOn="Poison" />
+
+    <ToggleButton
+        android:text="ToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toggleButtonFighting"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButtonGround"
+        app:layout_constraintRight_toLeftOf="@+id/toggleButtonPsychic"
+        android:textOff="Fighting"
+        android:textOn="Fighting" />
+
+    <ToggleButton
+        android:text="ToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toggleButtonPsychic"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButtonGround"
+        app:layout_constraintRight_toLeftOf="@+id/toggleButtonDark"
+        android:textOff="Psychic"
+        android:textOn="Psychic" />
+
+    <ToggleButton
+        android:text="ToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toggleButtonDark"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButtonFlying"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="4dp"
+        android:textOff="Dark"
+        android:textOn="Dark" />
+
+    <ToggleButton
+        android:text="ToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toggleButtonBug"
+        app:layout_constraintRight_toLeftOf="@+id/toggleButtonSteel"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButtonPsychic"
+        android:textOff="Bug"
+        android:textOn="BUg" />
+
+    <ToggleButton
+        android:text="ToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toggleButtonSteel"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButtonDark"
+        android:textOff="Steel"
+        android:textOn="Steel" />
+
+    <ToggleButton
+        android:text="ToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toggleButtonRock"
+        android:textOff="Rock"
+        android:textOn="Rock"
+        app:layout_constraintRight_toLeftOf="@+id/toggleButtonGhost"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButtonPoison" />
+
+    <ToggleButton
+        android:text="ToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toggleButtonGhost"
+        android:textOff="Ghost"
+        android:textOn="Ghost"
+        app:layout_constraintRight_toLeftOf="@+id/toggleButtonBug"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButtonFighting" />
+
+    <ToggleButton
+        android:text="ToggleButton"
+        android:layout_width="151dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/toggleButtonAllTypes"
+        android:textOff="Select All Types"
+        android:textOn="Select All Types"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButtonGhost"
+        android:layout_marginTop="4dp" />
+
+</android.support.constraint.ConstraintLayout>

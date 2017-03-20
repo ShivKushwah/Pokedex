@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <!-- "Mark Favorite", should appear as action button if possible -->
+
+
+        <item android:id="@+id/search"
+            android:title="searchbar"
+        android:icon="@drawable/ic_visibility_black_24dp"
+            app:showAsAction="always"
+
+            app:actionViewClass="android.support.v7.widget.SearchView"
+
+            />
+
+        <item android:id="@+id/grid_view"
+            android:icon="@drawable/ic_view_module_black_24dp"
+            android:title="Grid View"
+            app:showAsAction="always"/>
+
+        <item android:id="@+id/filter"
+            android:icon="@drawable/ic_view_headline_black_24dp"
+            android:title="Filter"
+            app:showAsAction="always"/>
+
+        <item android:id="@+id/randomPoke"
+            android:icon="@drawable/ic_repeat_black_24dp"
+            android:title="Random"
+            app:showAsAction="always"/>
+
+
+
+
+
+
+
+
+
+
+
+
+</menu>
