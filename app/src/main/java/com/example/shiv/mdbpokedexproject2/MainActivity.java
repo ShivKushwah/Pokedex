@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
             this.rview.scrollToPosition(0);
             return true;
 
-        } catch (Throwable e) {
+        } catch (NumberFormatException e) {
             //Case 2: If the query is the name
             final ArrayList<Pokedex.Pokemon> filteredModelList = filter(mModels, query);
             //Set the pokemons array to this new filtered list
