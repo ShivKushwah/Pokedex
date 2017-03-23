@@ -35,7 +35,7 @@ public class PokedexAdapter extends RecyclerView.Adapter<PokedexAdapter.CustomVi
     private final SortedList<Pokedex.Pokemon> mSortedList = new SortedList<>(Pokedex.Pokemon.class, new SortedList.Callback<Pokedex.Pokemon>() {
         @Override
         public int compare(Pokedex.Pokemon a, Pokedex.Pokemon b) {
-            return mComparator.compare(a, b);
+            return a.compareTo(b);//mComparator.compare(a, b);
         }
 
         @Override
@@ -69,15 +69,13 @@ public class PokedexAdapter extends RecyclerView.Adapter<PokedexAdapter.CustomVi
         }
     });
 
-    private final Comparator<Pokedex.Pokemon> mComparator;
     Context context;
     public ArrayList<Pokedex.Pokemon> pokemons;
 
 
-    public PokedexAdapter(Context context, ArrayList<Pokedex.Pokemon> pokemons, Comparator<Pokedex.Pokemon> comparator) {
+    public PokedexAdapter(Context context, ArrayList<Pokedex.Pokemon> pokemons) {
         this.context = context;
         this.pokemons = pokemons;
-        mComparator = comparator;
     }
 
 

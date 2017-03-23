@@ -67,12 +67,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
 
 
-        pokedexAdapter = new PokedexAdapter(getApplicationContext(), pokedex, new Comparator<Pokedex.Pokemon>() {
-            @Override
-            public int compare(Pokedex.Pokemon pokemon, Pokedex.Pokemon t1) {
-                return pokemon.name.compareTo(t1.name);
-            }
-        });
+        pokedexAdapter = new PokedexAdapter(getApplicationContext(), pokedex);
 
         rview.setAdapter(pokedexAdapter);
 

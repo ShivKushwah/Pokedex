@@ -35,7 +35,7 @@ public class Pokedex {
         return pokemons;
     }
 
-    public class Pokemon implements SortedListAdapter.ViewModel{
+    public class Pokemon implements Comparable, SortedListAdapter.ViewModel {
 
         String name;
         String number;
@@ -81,6 +81,12 @@ public class Pokedex {
             int result = (int) (num ^ (num >>> 32));
             result = 31 * result + (name != null ? name.hashCode() : 0);
             return result;
+        }
+
+        @Override
+        public int compareTo(Object t2) {
+            Pokedex.Pokemon t1 = (Pokedex.Pokemon) t2;
+            return this.name.compareTo(t1.name);
         }
 
 
