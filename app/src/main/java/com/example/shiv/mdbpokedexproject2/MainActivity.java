@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         ArrayList <Pokedex.Pokemon> pokedex = new Pokedex().getPokemon();
 
         //Since the pokedex types aren't working, initialize random types for proof of concept
+        /*
         for (int i = 0; i < 30; i++) {
             pokedex.get(i).type = "Dragon";
         }
@@ -64,6 +65,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         for (int i = 91; i < pokedex.size(); i++) {
             pokedex.get(i).type = "Fire";
         }
+        */
 
 
 

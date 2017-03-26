@@ -5,16 +5,46 @@ import android.util.Log;
 
 import com.github.wrdlbrnft.sortedlistadapter.SortedListAdapter;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import android.content.Context;
+import android.os.AsyncTask;
+import android.util.Log;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+// UNCOMMENT TO USE API and add compile 'me.sargunvohra.lib:pokekotlin:2.3.0' IN GRADLE DEPENDENCIES
+import me.sargunvohra.lib.pokekotlin.client.PokeApi;
+import me.sargunvohra.lib.pokekotlin.client.PokeApiClient;
+import me.sargunvohra.lib.pokekotlin.model.Pokemon;
+import me.sargunvohra.lib.pokekotlin.model.PokemonSpecies;
+import me.sargunvohra.lib.pokekotlin.model.PokemonStat;
+import me.sargunvohra.lib.pokekotlin.model.PokemonType;
+import me.sargunvohra.lib.pokekotlin.model.Stat;
+import me.sargunvohra.lib.pokekotlin.model.Type;
 
 /**
  * Created by aneeshjindal on 9/21/16.
  */
-public class Pokedex {
+public class Pokedex implements Serializable{
+
+    static PokeApi pokeapi = new PokeApiClient();
+    static File path;
+    final static int SIZE = 721;
 
     public ArrayList<Pokemon> getPokemon() {
         ArrayList<Pokemon> pokemons = new ArrayList<>();
@@ -33,6 +63,10 @@ public class Pokedex {
             Log.i("JSON error", "error parsing json data");
         }
         return pokemons;
+    }
+
+    private String capitalize(String word) {
+        return (char)(word.charAt(0) + 'A' - 'a') + word.substring(1);
     }
 
     public class Pokemon implements Comparable, SortedListAdapter.ViewModel {
@@ -54,10 +88,15 @@ public class Pokedex {
                 hp = jsonData.getString("HP").trim();
                 species = jsonData.getString("Species").trim();
 
+                JSONArray type_arr = jsonData.getJSONArray("Type");
+                type = type_arr.get(0).toString();
+
             } catch (JSONException e) {
                 Log.i("JSON error", "error parsing json data");
             }
         }
+
+
 
         @Override
         public boolean equals(Object o) {
