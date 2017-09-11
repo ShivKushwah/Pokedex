@@ -46,6 +46,7 @@ public class PokemonActivity extends AppCompatActivity {
             }
         });
 
+        //Special case for Flabebe and Farfetch'd, others should work in else case
         if (name.equals("Flabébé")) {
             Glide.with(getApplicationContext()).load("http://img.pokemondb.net/artwork/" + "flabebe" + ".jpg").into(pokeImage);
         }
